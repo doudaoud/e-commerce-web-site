@@ -1,0 +1,38 @@
+.container-left{
+    margin-left: 74px;
+}
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  width: 400px;
+  list-style: none;
+}
+ a {
+    color: rgb(16, 16, 16);
+  text-decoration: none;
+  transition: color 0.5s ;
+}
+a:hover{
+    color: rgb(122, 122, 122);
+
+}
+a:active{
+    color: rgb(122, 122, 122);
+
+}
+.container-right{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    width: 400px;
+    margin-right: 74px;
+}
+.container-right a{
+    margin-top: auto ;
+    margin-bottom: auto ;
+
+}
+button{
+    font-size: 16px;
+}
