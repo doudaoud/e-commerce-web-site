@@ -16,14 +16,11 @@ export default function Message() {
         
       }}
     >
-      <span className="lang" style={{
-        marginLeft:'93px'
-      }}>
+      <span className="lang" >
         <span  style={{ marginRight: "10px" }}>
           EN
           <span
             style={{
-              
               position: "relative",
               marginLeft: "10px",
               color: "gray",
@@ -35,7 +32,7 @@ export default function Message() {
         <span> STORE LOCATION</span>
       </span>
       <p className="discount">20% OFF WITH SMS OR EMAIL SIGN UP</p>
-      <p style={{marginRight:"93px"}} className="phone">(+213) – 551 860 590</p>
+      <p className="phone">(+213) – 551 860 590</p>
     </div>
   );
 }

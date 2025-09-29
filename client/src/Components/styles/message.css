@@ -1,23 +1,25 @@
+.lang{
+    margin-left: 93px;
+}
+.phone{
+    margin-right: 93px;
+}
 @media (max-width: 991px) {
   .message-container {
     display: flex;
     justify-content: space-between;
-    /* width: 100%; */
+    width: 100%;
+    padding: 0 15px; /* Ajout d'un padding pour l'espacement sur les bords */
   }
   .discount {
     display: none;
   }
   .lang {
-    /* display: inline-block; */
-    background-color: gold;
-    /* margin-left: -50px; */
-    width: 50%;
+    margin-left: 0px !important;
+    /* Les propriétés de largeur et de couleur de fond sont supprimées pour laisser flexbox gérer l'espacement */
   }
   .phone {
-    /* margin-right: 0px; */
-    background-color: brown;
-    /* margin-left: -50px; */
-    width: 50%;
-    direction: rtl;
+    margin-right: 0px !important;
+    /* Les propriétés de largeur, de couleur de fond et de direction sont supprimées */
   }
 }
