@@ -6,15 +6,19 @@ import Button from "@mui/material/Button";
 import AddIcon from "@mui/icons-material/Add";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import IconButton from "@mui/material/IconButton";
+import { useContext } from "react";
+import { SearchContext } from "../contexts/Searchcontext";
 export default function NavBar() {
+  const { isopen, Setopen } = useContext(SearchContext);
   return (
+    <>
     <div
       style={{
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center  ",
         height: "71px",
-        backgroundColor:'green'
+        backgroundColor: "green",
       }}
     >
       <div className="container-left">
@@ -40,11 +44,14 @@ export default function NavBar() {
         </h3>
       </div>
 
-      <div className="container-right" >
+      <div className="container-right">
         <Button
           variant="text"
           sx={{
             color: "rgb(16,16,16)",
+          }}
+          onClick={() => {
+            Setopen(!isopen);
           }}
         >
           <SearchIcon />
@@ -63,6 +70,10 @@ export default function NavBar() {
           <AccountCircleIcon />
         </IconButton>
       </div>
+     
     </div>
+    
+    </>
+   
   );
 }
