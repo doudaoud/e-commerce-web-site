@@ -18,7 +18,6 @@ export default function NavBar() {
         justifyContent: "space-between",
         alignItems: "center  ",
         height: "71px",
-        backgroundColor: "green",
       }}
     >
       <div className="container-left">
@@ -40,7 +39,7 @@ export default function NavBar() {
       </div>
       <div className="container-center">
         <h3>
-          <Link to="/">STYNRA</Link>
+          <Link to="/" className="STYNRA">STYNRA</Link>
         </h3>
       </div>
 

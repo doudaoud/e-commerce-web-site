@@ -8,12 +8,16 @@ ul {
   width: 400px;
   list-style: none;
 }
- a {
+.STYNRA{
+    color: rgb(16, 16, 16);
+  text-decoration: none;
+}
+ a:not(.STYNRA){
     color: rgb(16, 16, 16);
   text-decoration: none;
   transition: color 0.5s ;
 }
-a:hover{
+a:not(.STYNRA):hover{
     color: rgb(122, 122, 122);
 
 }
