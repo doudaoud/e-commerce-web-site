@@ -1,8 +1,8 @@
 import React from "react";
-
+import "./styles/message.css";
 export default function Message() {
   return (
-    <div
+    <div className="message-container"
       style={{
         color: "white",
         backgroundColor: "rgb(16, 16, 16)",
@@ -13,16 +13,17 @@ export default function Message() {
         height: "44px",
         fontFamily: "sans-serif",
         fontSize: "14px",
-        // fontWeight:"300px"
+        
       }}
     >
-      <span style={{
+      <span className="lang" style={{
         marginLeft:'93px'
       }}>
-        <span style={{ marginRight: "10px" }}>
+        <span  style={{ marginRight: "10px" }}>
           EN
           <span
             style={{
+              
               position: "relative",
               marginLeft: "10px",
               color: "gray",
@@ -33,8 +34,8 @@ export default function Message() {
         </span>
         <span> STORE LOCATION</span>
       </span>
-      <p>20% OFF WITH SMS OR EMAIL SIGN UP</p>
-      <p style={{marginRight:"93px"}}>(+213) – 551 860 590</p>
+      <p className="discount">20% OFF WITH SMS OR EMAIL SIGN UP</p>
+      <p style={{marginRight:"93px"}} className="phone">(+213) – 551 860 590</p>
     </div>
   );
 }

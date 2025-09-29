@@ -40,3 +40,12 @@ a:active{
 button{
     font-size: 16px;
 }
+
+@media screen and (max-width:991px) {
+    .container-left{
+        display: none;
+    }
+    .container-right{
+        display: none;
+    }
+}

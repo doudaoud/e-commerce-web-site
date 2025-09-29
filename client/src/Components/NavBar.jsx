@@ -20,6 +20,7 @@ export default function NavBar() {
         height: "71px",
       }}
     >
+      
       <div className="container-left">
         <ul>
           <li>
@@ -69,7 +70,7 @@ export default function NavBar() {
           <AccountCircleIcon />
         </IconButton>
       </div>
-     
+      
     </div>
     
     </>
