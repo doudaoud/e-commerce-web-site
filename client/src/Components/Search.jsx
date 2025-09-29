@@ -1,4 +1,3 @@
-import React from "react";
 import "./styles/search.css";
 import {
   Box,
@@ -9,8 +8,10 @@ import {
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
-
+import { useContext } from "react";
+import { SearchContext } from "../contexts/Searchcontext";
 export default function SearchBar() {
+  const { Setopen } = useContext(SearchContext);
   return (
     <Paper 
     className="search-bar"
@@ -28,7 +29,11 @@ export default function SearchBar() {
       }}
     >
       {/* Bouton close en haut à droite */}
-      <IconButton size="small">
+      <IconButton size="small"
+      onClick={() => {
+        Setopen(false);
+      }
+      }>
         <CloseIcon />
       </IconButton>
 
