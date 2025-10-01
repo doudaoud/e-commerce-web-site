@@ -6,10 +6,7 @@
 .container-left {
   margin-left: 74px;
 }
-.container-center{
-      margin-left: -200px;
 
-}
 .container-left-responsive{
   display: none;
 }
@@ -65,7 +62,10 @@ button {
     align-items: center;
 
   }
- 
+ .container-center{
+      margin-left: -200px;
+
+}
   .container-right {
     display: none;
   }
