@@ -1,0 +1,13 @@
+.card-container {
+}
+.card {
+  height: 350px;
+  width: 528px;
+  background-color: white;
+
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

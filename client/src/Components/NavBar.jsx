@@ -15,6 +15,8 @@ import Buttons_responsive from "./Buttons_responsive";
 import Textfeild from "./Textfeild";
 export default function NavBar() {
   const { isopen, Setopen } = useContext(SearchContext);
+  const [aff, Setaff] = useState(false);
+  
   const [card, setCard] = useState(0);
   const navigate = useNavigate();
   return (
@@ -100,7 +102,9 @@ export default function NavBar() {
           <IconButton>
             <AccountCircleIcon />
           </IconButton>
-          <IconButton>
+          <IconButton onClick={()=>  {
+            Setaff(!aff)
+          }}>
             <LocalMallIcon />
           </IconButton>
           <p className="card">{`(${card})`}</p>
