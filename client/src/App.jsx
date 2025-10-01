@@ -8,6 +8,7 @@ import Catigories from "./Pages/Catigories";
 import Shop from "./Pages/Shop";
 import Contact from "./Pages/Contact";
 import Search from "./Components/Search";
+import Login from "./Pages/Login";
 import { useState } from "react";
 function App() {
   <Routes>
@@ -16,6 +17,7 @@ function App() {
     <Route path="/categories" element={<Catigories />} />
     <Route path="/shop" element={<Shop />} />
     <Route path="/contact-us" element={<Contact />} />
+    <Route path="/login" element={<Login />} />
   </Routes>;
   const [isopen, Setopen] = useState(false);
   return (
@@ -23,9 +25,8 @@ function App() {
       <Message />
       <SearchContext.Provider value={{ isopen, Setopen }}>
         <NavBar />
-         {isopen && <Search />}
+        {isopen && <Search />}
       </SearchContext.Provider>
-     
     </>
   );
 }

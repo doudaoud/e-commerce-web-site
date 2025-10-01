@@ -19,7 +19,7 @@
     /* Les propriétés de largeur et de couleur de fond sont supprimées pour laisser flexbox gérer l'espacement */
   }
   .phone {
-    margin-right: 0px !important;
+    margin-right: 20px !important;
     /* Les propriétés de largeur, de couleur de fond et de direction sont supprimées */
   }
 }

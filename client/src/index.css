@@ -70,3 +70,7 @@ button:focus-visible {
   font-family: sans-serif;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+

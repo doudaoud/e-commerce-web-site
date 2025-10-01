@@ -3,3 +3,15 @@
     right: -300px;
     top: -40px;
 }
+@media (max-width: 991px) {
+.search-box{
+    width: fit-content;
+    height: fit-content;
+}
+.search-bar{
+    position: relative;
+    right: 500px;
+    top: 150px;
+}
+
+}
