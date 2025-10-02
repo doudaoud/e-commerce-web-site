@@ -11,12 +11,14 @@ import IconButton from "@mui/material/IconButton";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import { useContext, useState } from "react";
 import { SearchContext } from "../contexts/Searchcontext";
+import { cardshopContext } from "../contexts/Cardshopcontext";
 import Buttons_responsive from "./Buttons_responsive";
 import Textfeild from "./Textfeild";
-import Card from "./Card";
+import CardShop from "./CardShop";
 export default function NavBar() {
   const { isopen, Setopen } = useContext(SearchContext);
-  const [aff, Setaff] = useState(false);
+  const { cancel , setCancel } = useContext(cardshopContext);
+  // const [aff, Setaff] = useState(false);
   
   const [card, setCard] = useState(0);
   const navigate = useNavigate();
@@ -104,7 +106,7 @@ export default function NavBar() {
             <AccountCircleIcon />
           </IconButton>
           <IconButton onClick={()=>  {
-            Setaff(!aff)
+            setCancel(!cancel)
           }}>
             <LocalMallIcon />
           </IconButton>
@@ -112,7 +114,7 @@ export default function NavBar() {
         </div>
       </div>
       {
-        aff && <Card/> 
+        cancel && <CardShop/> 
       }
     </>
   );

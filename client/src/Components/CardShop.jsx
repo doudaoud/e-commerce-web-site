@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext} from "react";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
-export default function Card() {
+import { cardshopContext } from "../contexts/Cardshopcontext";
+export default function CardShop() {
+  const { cancel , setCancel } = useContext(cardshopContext);
   const [items, SetItems] = useState([]);
   return (
     <div
@@ -17,6 +19,7 @@ export default function Card() {
         justifyContent: "center",
         alignItems: "center",
       }}
+      onClick={() => setCancel(false)}
     >
       <div
         className="card"
@@ -40,8 +43,15 @@ export default function Card() {
             borderBottom: "1px solid rgb(230, 230, 230)",
           }}
         >
-          <h2>YOUR CARD</h2>
-          <IconButton aria-label="cancel">
+          <h2 
+          style={{
+            marginLeft:"25px"
+          }}>YOUR CARD</h2>
+          <IconButton aria-label="cancel"
+          sx={{
+            marginRight:'25px'
+          }}
+          onClick={() => setCancel(false) } >
             <CloseIcon />
           </IconButton>
         </div>
@@ -59,10 +69,11 @@ export default function Card() {
           {items.length === 0 ? (
             <p
               style={{
+                
                 color: "rgb(112, 112, 112)",
               }}
             >
-              no items found in your card
+              No items found.
             </p>
           ) : (
             <div>

@@ -2,6 +2,7 @@ import "./App.css";
 import Message from "./Components/Message";
 import { Routes, Route } from "react-router-dom";
 import { SearchContext } from "./contexts/Searchcontext";
+import { cardshopContext } from "./contexts/Cardshopcontext";
 import NavBar from "./Components/NavBar";
 import Story from "./Pages/Story";
 import Catigories from "./Pages/Catigories";
@@ -20,13 +21,17 @@ function App() {
     <Route path="/login" element={<Login />} />
   </Routes>;
   const [isopen, Setopen] = useState(false);
+  const [cancel , setCancel ] = useState(false)
+
   return (
     <>
       <Message />
+      <cardshopContext.Provider value={{ cancel , setCancel}}>
       <SearchContext.Provider value={{ isopen, Setopen }}>
         <NavBar />
         {isopen && <Search />}
       </SearchContext.Provider>
+      </cardshopContext.Provider>
     </>
   );
 }
