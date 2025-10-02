@@ -13,6 +13,7 @@ import { useContext, useState } from "react";
 import { SearchContext } from "../contexts/Searchcontext";
 import Buttons_responsive from "./Buttons_responsive";
 import Textfeild from "./Textfeild";
+import Card from "./Card";
 export default function NavBar() {
   const { isopen, Setopen } = useContext(SearchContext);
   const [aff, Setaff] = useState(false);
@@ -110,6 +111,9 @@ export default function NavBar() {
           <p className="card">{`(${card})`}</p>
         </div>
       </div>
+      {
+        aff && <Card/> 
+      }
     </>
   );
 }
