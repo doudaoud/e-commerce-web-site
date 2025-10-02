@@ -31,6 +31,7 @@ export default function NavBar() {
           alignItems: "center  ",
           height: "71px",
         }}
+        className="navbar"
       >
         {/* container pour les composant de responsive */}
         <div className="container-left-responsive">

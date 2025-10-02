@@ -1,6 +1,13 @@
 .lang{
     margin-left: 93px;
 }
+.message-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
 .phone{
     margin-right: 93px;
 }

@@ -2,12 +2,23 @@
   display: flex;
   align-items: center;
 }
-
+.navbar {
+  position: fixed;
+  top: 44px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 71px;
+  
+}
 .container-left {
   margin-left: 74px;
 }
 
-.container-left-responsive{
+.container-left-responsive {
   display: none;
 }
 
@@ -21,7 +32,6 @@ ul {
 .STYNRA {
   color: rgb(16, 16, 16);
   text-decoration: none;
-
 }
 a:not(.STYNRA) {
   color: rgb(16, 16, 16);
@@ -56,23 +66,19 @@ button {
   .container-left {
     display: none;
   }
-  .container-left-responsive{
+  .container-left-responsive {
     display: flex;
     width: 284px;
     align-items: center;
-
   }
- .container-center{
-      margin-left: -200px;
-
-}
+  .container-center {
+    margin-left: -200px;
+  }
   .container-right {
     display: none;
   }
   .container-right-responsive {
     display: flex;
     justify-content: space-around;
-
-    
   }
 }
