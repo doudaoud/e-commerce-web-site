@@ -7,117 +7,102 @@ export default function CardShop() {
   const { cancel, setCancel } = useContext(cardshopContext);
   const [items, SetItems] = useState([]);
   return (
-    <div 
-    style={{
-          position: " absolute",
-          top: "0%",
-          left: "0%",
-          background: "rgba(0, 0, 0, 0.637)",
-          width: "100vw",
-          height: "100vh",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-        onClick={() => setCancel(!cancel)}
+    <div
+      style={{
+        position: "fixed",
+        top: "0%",
+        left: "0%",
+        background: "rgba(0, 0, 0, 0.637)",
+        width: "100vw",
+        height: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        zIndex: "100",
+      }}
+      onClick={() => setCancel(!cancel)}
     >
       <FadeContent
-      blur={true}
-      duration={1000}
-      easing="ease-out"
-      initialOpacity={0}
-    >
-      <div
-        className="card-container"
-        // style={{
-        //   position: " absolute",
-        //   top: "0%",
-        //   left: "0%",
-        //   background: "rgba(0, 0, 0, 0.637)",
-        //   width: "100vw",
-        //   height: "100vh",
-        //   display: "flex",
-        //   justifyContent: "center",
-        //   alignItems: "center",
-        // }}
-        
+        blur={true}
+        duration={1000}
+        easing="ease-out"
+        initialOpacity={0}
       >
-        <div
-          className="card"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            width: "480px",
-            height: "317px",
-            background: "white",
-          }}
-        >
+        <div className="card-container">
           <div
-            className="hedear"
+            className="card"
             style={{
-              width: "100%",
-              height: "92px",
               display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              borderBottom: "1px solid rgb(230, 230, 230)",
+              flexDirection: "column",
+              width: "480px",
+              height: "317px",
+              background: "white",
             }}
           >
-            <h2
+            <div
+              className="hedear"
               style={{
-                marginLeft: "25px",
+                width: "100%",
+                height: "92px",
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                borderBottom: "1px solid rgb(230, 230, 230)",
               }}
             >
-              YOUR CARD
-            </h2>
-            <IconButton
-              aria-label="cancel"
-              sx={{
-                marginRight: "25px",
-              }}
-              onClick={() => setCancel(false)}
-            >
-              <CloseIcon />
-            </IconButton>
-          </div>
-          <div
-            className="body"
-            style={{
-              width: "100%",
-              height: "224px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            {items.length === 0 ? (
-              <p
+              <h2
                 style={{
-                  color: "rgb(112, 112, 112)",
+                  marginLeft: "25px",
                 }}
               >
-                No items found.
-              </p>
-            ) : (
-              <div>
-                {items.map((item) => {
-                  return (
-                    <>
-                      <div className="item">
-                        <img src={item.img} alt="" />
-
-                        {/* TODO: apres il faut ajouter tout  */}
-                      </div>
-                    </>
-                  );
-                })}
-              </div>
-            )}
+                YOUR CARD
+              </h2>
+              <IconButton
+                aria-label="cancel"
+                sx={{
+                  marginRight: "25px",
+                }}
+                onClick={() => setCancel(false)}
+              >
+                <CloseIcon />
+              </IconButton>
+            </div>
+            <div
+              className="body"
+              style={{
+                width: "100%",
+                height: "224px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              {items.length === 0 ? (
+                <p
+                  style={{
+                    color: "rgb(112, 112, 112)",
+                  }}
+                >
+                  No items found.
+                </p>
+              ) : (
+                <div>
+                  {items.map((item) => {
+                    return (
+                      <>
+                        <div className="item">
+                          <img src={item.img} alt="" />
+                          {/* TODO: apres il faut ajouter tout  */}
+                        </div>
+                      </>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
           </div>
         </div>
-      </div>
-    </FadeContent>
+      </FadeContent>
     </div>
-    
   );
 }

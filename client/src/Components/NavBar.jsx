@@ -67,7 +67,7 @@ export default function NavBar() {
           </h2>
         </div>
         {/* container pour les composant de responsive */}
-        <div className="container-right-responsive">
+        <div className="container-right-responsive" >
           <IconButton>
             <LocalMallIcon />
           </IconButton>

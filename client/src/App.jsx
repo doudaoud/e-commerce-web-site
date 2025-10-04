@@ -3,6 +3,7 @@ import Message from "./Components/Message";
 import { Routes, Route } from "react-router-dom";
 import { SearchContext } from "./contexts/Searchcontext";
 import { cardshopContext } from "./contexts/Cardshopcontext";
+import { menuContext } from "./contexts/Menucontext";
 import NavBar from "./Components/NavBar";
 import Story from "./Pages/Story";
 import Catigories from "./Pages/Catigories";
@@ -11,6 +12,7 @@ import Contact from "./Pages/Contact";
 import Search from "./Components/Search";
 import Login from "./Pages/Login";
 import { useState } from "react";
+import Container_buttons from "./Components/Container_buttons";
 function App() {
   <Routes>
     <Route path="/" element={<App />} />
@@ -21,17 +23,22 @@ function App() {
     <Route path="/login" element={<Login />} />
   </Routes>;
   const [isopen, Setopen] = useState(false);
-  const [cancel , setCancel ] = useState(false)
-
+  const [cancel, setCancel] = useState(false);
+  const [menu, setMenu] = useState(false);
   return (
     <>
       <Message />
-      <cardshopContext.Provider value={{ cancel , setCancel}}>
-      <SearchContext.Provider value={{ isopen, Setopen }}>
-        <NavBar />
-        {isopen && <Search />}
-      </SearchContext.Provider>
-      </cardshopContext.Provider>
+      <menuContext.Provider value={{ menu, setMenu }}>
+        <cardshopContext.Provider value={{ cancel, setCancel }}>
+          <SearchContext.Provider value={{ isopen, Setopen }}>
+            <NavBar />
+            {isopen && <Search />}
+            {
+              menu && <Container_buttons/>
+            }
+          </SearchContext.Provider>
+        </cardshopContext.Provider>
+      </menuContext.Provider>
     </>
   );
 }

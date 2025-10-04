@@ -12,6 +12,7 @@
   justify-content: space-between;
   align-items: center;
   height: 71px;
+  border-bottom: 1px solid rgb(227, 227, 227);
   
 }
 .container-left {
@@ -66,13 +67,17 @@ button {
   .container-left {
     display: none;
   }
+  .navbar{
+    height: 74px;
+  }
   .container-left-responsive {
     display: flex;
     width: 284px;
+    margin-left: 20px;
     align-items: center;
   }
   .container-center {
-    margin-left: -200px;
+    margin-left: -100px;
   }
   .container-right {
     display: none;
@@ -80,5 +85,7 @@ button {
   .container-right-responsive {
     display: flex;
     justify-content: space-around;
+    align-content: center;
+    margin-right: 20px;
   }
 }

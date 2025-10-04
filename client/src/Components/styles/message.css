@@ -22,11 +22,11 @@
     display: none;
   }
   .lang {
-    margin-left: 0px !important;
+    margin-left: 5px !important;
     /* Les propriétés de largeur et de couleur de fond sont supprimées pour laisser flexbox gérer l'espacement */
   }
   .phone {
-    margin-right: 20px !important;
+    margin-right: 45px !important;
     /* Les propriétés de largeur, de couleur de fond et de direction sont supprimées */
   }
 }

@@ -2,7 +2,8 @@ import React from "react";
 import "./styles/message.css";
 export default function Message() {
   return (
-    <div className="message-container"
+    <div
+      className="message-container"
       style={{
         color: "white",
         backgroundColor: "rgb(16, 16, 16)",
@@ -13,11 +14,10 @@ export default function Message() {
         height: "44px",
         fontFamily: "sans-serif",
         fontSize: "14px",
-        
       }}
     >
-      <span className="lang" >
-        <span  style={{ marginRight: "10px" }}>
+      <span className="lang">
+        <span style={{ marginRight: "10px" }}>
           EN
           <span
             style={{
